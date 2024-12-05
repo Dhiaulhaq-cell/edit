@@ -1,0 +1,32 @@
+<%- include('layouts/header') %>
+<%- include('layouts/nav') %>
+    <h1>Informasi Kontak</h1>
+    <button><a href="/addcontact" style="text-decoration: none; color: inherit;">Tambah</a></button>
+    <table>
+        <thead>
+            <tr>
+                <th>Nama</th>
+                <th>Mobile</th>
+                <th>Email</th>
+                <th>Aksi</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <% cont.forEach(function(item) { %>
+                <tr>
+                    <td><%= item.name %></td>
+                    <td><%= item.mobile %></td>
+                    <td><%= item.email %></td>
+                    <td><button><a href="/editcontact/<%= item.name %>" style="text-decoration: none; color: inherit;">Edit</a></button>
+                        <button><a href = "/deletecontact/<%= item.name %>" style="text-decoration: none; color: inherit;">Hapus</a></button>
+                        <button><a href="/contact/<%= item.name %>" style="text-decoration: none; color: inherit;">Detail</a></button>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+  </body>
+  <%- include('layouts/footer') %>
+  </html>
+</html>

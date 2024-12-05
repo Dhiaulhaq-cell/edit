@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Kontak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Tambah Kontak</h2>
+    <form action="/editcontact" method="POST">
+        <label for="name">Nama</label>
+        <input type="text" id="name" name="name" placeholder="Masukkan nama" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Masukkan email" required>
+
+        <label for="phone">Nomor Telepon</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Masukkan nomor telepon" required>
+
+       
+        <button type="submit">Edit Kontak</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Kontak</title>
+</head>
+<body>
+    <h1>Edit Kontak</h1>
+    <form action="/editcontact/<%= contact.name %>" method="POST">
+        <label for="name">Nama:</label>
+        <input type="text" name="name" value="<%= contact.name %>" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" value="<%= contact.email %>" required><br><br>
+
+        <label for="mobile">Nomor Telepon:</label>
+        <input type="text" name="mobile" value="<%= contact.mobile %>" required><br><br>
+
+        <button type="submit">Simpan Perubahan</button>
+    </form>
+    <button><a href="/contact" style="text-decoration: none; color: inherit;">Batal</a></button>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node 2.readFile.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "fal": "ls"
+  },
+  "author": "Dhiaulhaq",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.21.1",
+    "express-ejs-layouts": "^2.5.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7",
+    "validator": "^13.12.0",
+    "yargs": "^17.7.2"
+  }
+}

@@ -1,0 +1,22 @@
+<h1>Informasi Kontak</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Mobile</th>
+            <th>Email</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <% cont.forEach(function(item) { %>
+            <tr>
+                <td><%= item.name %></td>
+                <td><%= item.mobile %></td>
+                <td><%= item.email %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+</table>
+</body>
